@@ -5,8 +5,8 @@ services:
  - docker
 
 before _install:
-  -docker build -t moaz-adel/testing -f Dockerfile.dev .
+  -docker build -t Moaz-Adel/React-Test -f Dockerfile.dev .
 
 scripts:
 
-  -docker run -e CI-true moaz-adel/testing npm run test 
+  -docker run -e CI=true Moaz-Adel/React-Test npm run test 
