@@ -1,0 +1,12 @@
+sudo: required
+language: generic
+
+services:
+ - docker
+
+before _install:
+  -docker build -t moaz-adel/testing -f Dockerfile.dev .
+
+scripts:
+
+  -docker run -e CI-true moaz-adel/testing npm run test 
