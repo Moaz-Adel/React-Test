@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}  
-      - run: docker build -t Moaz-Adel/React-Test -f Dockerfile.dev .
-      - run: docker run -e CI=true Moaz-Adel/React-Test npm run test
+      - run: docker build -t moaz-adel/react-test -f Dockerfile.dev .
+      - run: docker run -e CI=true moaz-adel/react-test npm run test
 

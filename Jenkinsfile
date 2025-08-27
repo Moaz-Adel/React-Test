@@ -9,7 +9,7 @@ pipeline {
         stage('build from a docker file new') {
             steps {
                 script {
-                    sh 'docker build -t Moaz-Adel/React-Test -f Dockerfile.dev .'
+                    sh 'docker build -t moaz-adel/react-test -f Dockerfile.dev .'
 
 
 
@@ -27,7 +27,7 @@ pipeline {
                      script {
 
                          env.DOCKER_BUILDKIT = 1
-                         sh 'docker run -e CI=true Moaz-Adel/React-Test npm run test'
+                         sh 'docker run -e CI=true moaz-adel/react-test npm run test'
 
                     }
                 }
