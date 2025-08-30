@@ -1,5 +1,4 @@
 pipeline {
-    //hi
     
     agent {
         label 'docker'
