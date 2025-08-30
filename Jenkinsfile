@@ -1,8 +1,4 @@
 pipeline {
-    
-    agent {
-        label 'docker'
-    }
 
     stages {
         stage('build from a docker file new') {
@@ -37,7 +33,4 @@ pipeline {
 
 
     }
-
-
-
 }
